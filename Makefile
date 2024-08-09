@@ -10,5 +10,8 @@ run:
 test:
 	docker exec -it --workdir /app/counter -e MIX_ENV=test counter mix test
 
+cover:
+	docker exec -it --workdir /app/counter -e MIX_ENV=test counter mix c
+
 enter: 
 	docker exec -it counter /bin/bash
