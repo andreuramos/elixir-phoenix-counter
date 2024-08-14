@@ -26,13 +26,7 @@ defmodule CounterWeb.Counter do
 
     def render(assigns) do
         ~H"""
-        <div>
-            <h1 class="text-4xl font-bold text-center"> Counter: <%= @val %> </h1>
-            <p class="text-center">
-                <.button phx-click="decrease">-</.button>
-                <.button phx-click="increase">+</.button>
-            </p>
-        </div>
+        <.live_component module={CounterComponent} id="counter" val={@val} />
         """
     end
 end
